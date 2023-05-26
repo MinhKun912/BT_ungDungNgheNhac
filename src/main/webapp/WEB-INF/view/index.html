@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" >
+    <title>Title</title>
+</head>
+<body>
+<h1>HELLO SPRING MP3</h1>
+<audio controls th:src="@{/mp3/${fileName}}">
+</audio>
+<form th:action="@{/upload}" method="post" enctype="multipart/form-data">
+<input type="file" name="mp3" th:src="@{/mp3/${filename}}">
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
